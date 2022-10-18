@@ -1,8 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "react-bootstrap/Container";
+import FormularioTarea from "./components/FormularioTarea";
 
 function App() {
   return (
-    <h1 className='display-5'>Prueba</h1>
+    <Container className="my-5">
+      <h1 className="display-5 text-center">Lista de Tareas</h1>
+      <hr />
+      <FormularioTarea></FormularioTarea>
+
+    </Container>
   );
 }
 
