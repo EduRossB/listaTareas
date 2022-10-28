@@ -8,7 +8,6 @@ function App() {
       <h1 className="display-5 text-center">Lista de Tareas</h1>
       <hr />
       <FormularioTarea></FormularioTarea>
-
     </Container>
   );
 }
