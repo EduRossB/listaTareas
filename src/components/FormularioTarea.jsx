@@ -10,10 +10,15 @@ const FormularioTarea = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Hola");
     setArregloTareas([...arregloTareas, tarea]);
-    setTarea("")
+    setTarea("");
   };
+
+const borrarTarea = (nombre)=>{
+  let arregloModificado = arregloTareas.filter((item)=> item !== nombre);
+  setArregloTareas(arregloModificado)
+}
+
   return (
     <div>
       <Form onSubmit={handleSubmit}>
@@ -31,7 +36,7 @@ const FormularioTarea = () => {
         </Form.Group>
       </Form>
 
-      <ListaTareas></ListaTareas>
+      <ListaTareas propsArregloTareas={arregloTareas} borrarTarea={borrarTarea}></ListaTareas>
     </div>
   );
 };
